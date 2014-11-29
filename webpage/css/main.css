@@ -1,0 +1,35 @@
+/*
+ * Base structure
+ */
+
+ html,
+ body {
+ 	height: 100%;
+ 	background-color: #36a7ea;
+ }
+ body {
+ 	color: #FFFFFF;
+ 	text-align: center;
+ }
+
+ .monopoly-header {
+ 	margin-top: 20%
+ }
+
+ .monopoly-sub-header {
+ 	margin-top: 3%
+ }
+
+ .monopoly-submit-box {
+ 	margin: 0 auto;
+ 	width: 700px;
+ 	text-align: left;
+ }
+
+ .btn-monopoly-start {
+ 	text-align: left
+ }
+
+ .player-form {
+ 	width: 50%
+ }
