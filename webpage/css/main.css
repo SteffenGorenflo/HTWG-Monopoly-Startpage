@@ -22,7 +22,6 @@
 
  .monopoly-submit-box {
  	margin: 0 auto;
- 	width: 700px;
  	text-align: left;
  }
 
@@ -31,5 +30,5 @@
  }
 
  .player-form {
- 	width: 50%
+ 	width: 100%
  }
