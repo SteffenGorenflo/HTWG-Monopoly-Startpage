@@ -1,39 +1,46 @@
 /*
  * Base structure
  */
+html, body {
+	height: 100%;
+	background-color: #36a7ea;
+}
 
- html,
- body {
- 	height: 100%;
- 	background-color: #36a7ea;
- }
- body {
- 	color: #FFFFFF;
- 	text-align: center;
- }
+body {
+	color: #FFFFFF;
+	text-align: center;
+}
 
- .monopoly-header {
- 	margin-top: 15%
- }
+.monopoly-header {
+	margin-top: 15%
+}
 
- .monopoly-sub-header {
- 	margin-top: 3%
- }
+.monopoly-sub-header {
+	margin-top: 3%
+}
 
- .monopoly-submit-box {
- 	margin: 0 auto;
- 	text-align: left;
- }
+.monopoly-submit-box {
+	margin: 0 auto;
+	text-align: left;
+}
 
- .btn-monopoly-start {
- 	text-align: left;
- 	margin-top: 3%
- }
+.btn-monopoly-start {
+	text-align: left;
+	margin-top: 3%
+}
 
- .player-form {
- 	width: 100%
- }
- 
- .row-elements {
- 
- }
+.player-form {
+	width: 100%
+}
+
+.minus-button-container .minus-button {
+	display: none;
+}
+.minus-button-container:hover .minus-button {
+	display: block;
+}
+
+.minus-button-container:nth-child(2) .minus-button, .minus-button-container:nth-child(1) .minus-button {
+	background: red;
+	
+}
