@@ -1,67 +1,287 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTWG Monopoly</title>
 
-    <!-- Bootstrap -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTWG Monopoly</title>
 
-  </head>
-  <body>
-    <div class="container">
+<!-- Bootstrap -->
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Custom styles for this template -->
+<link href="css/main.css" rel="stylesheet">
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-      <h1 class="text-center monopoly-header">HTWG Monopoly</h1>
-      <h4 class="monopoly-sub-header">Herzlich willkommen bla bla</h4>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="monopoly-submit-box">
-            <div class="row">
+</head>
+<body>
+	<div class="container">
 
-              <div class="col-md-1"><p>&nbsp;</p></div>
-              <div class="col-md-8">
-                <form role="form">
-                  <p>Bitte Spielernamen eingeben</p>
-                  <div class="form-group">
-                    <input class="form-control player-form" id="player1" placeholder="Enter Player 1">
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control player-form" id="player2" placeholder="Enter Player 2">
-                  </div>
-                  <button type="button" class="btn btn-default btn-monopoly-start">Start Game</button>
-                </form>
-              </div>
-              <div class="col-md-3">
-                <p>&nbsp;</p>
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    Dropdown
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
+		<h1 class="text-center monopoly-header">HTWG Monopoly</h1>
+		<h4 class="monopoly-sub-header">Herzlich willkommen bla bla</h4>
+		<div class="row">
+			<!-- empty col -->
+			<div class="col-md-3"></div>
+			<!-- Middle col with forms -->
+			<div class="col-md-6">
+				<div class="monopoly-submit-box row-elements">
+					<div class="row">
+						<!-- col for minus -->
+						<div class="col-md-1">
+							<p>&nbsp;</p>
+						</div>
+						<!-- col for forms -->
+						<div class="col-md-8">
+							<p>Bitte Spielernamen eingeben</p>
+						</div>
+						<!-- Dropdown col -->
+						<div class="col-md-3">
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div class="row">
 
+						<!-- col for minus -->
+						<div class="col-md-1"></div>
+						<!-- col for forms -->
+						<div class="col-md-8">
+
+							<form role="form">
+								<div class="form-group">
+									<input class="form-control player-form" id="player1"
+										placeholder="Enter Player 1">
+								</div>
+							</form>
+						</div>
+
+						<!-- Dropdown col -->
+						<div class="col-md-3">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Boger</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Maechtel</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Neuschwander</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Eck</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<!-- col for minus -->
+						<div class="col-md-1"></div>
+						<!-- col for forms -->
+						<div class="col-md-8">
+							<form role="form">
+								<div class="form-group">
+									<input class="form-control player-form" id="player2"
+										placeholder="Enter Player 2">
+								</div>
+							</form>
+						</div>
+
+						<!-- Dropdown col -->
+						<!--  
+						<div class="col-md-3">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Boger</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Maechtel</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Neuschwander</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Eck</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-md-1"></div>
+
+						<div class="col-md-8">
+							<form role="form">
+								<div class="form-group">
+									<input class="form-control player-form" id="player2"
+										placeholder="Enter Player 3">
+								</div>
+							</form>
+						</div>
+
+
+						<div class="col-md-3">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Boger</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Maechtel</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Neuschwander</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Eck</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-md-1">
+							<p>MINUS</p>
+						</div>
+
+						<div class="col-md-8">
+							<form role="form">
+								<div class="form-group">
+									<input class="form-control player-form" id="player2"
+										placeholder="Enter Player 4">
+								</div>
+							</form>
+						</div>
+
+						<div class="col-md-3">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Boger</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Maechtel</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Neuschwander</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Eck</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-1">
+							<p>MINUS</p>
+						</div>
+						<div class="col-md-8">
+							<form role="form">
+								<div class="form-group">
+									<input class="form-control player-form" id="player2"
+										placeholder="Enter Player 5">
+								</div>
+							</form>
+						</div>
+
+						<div class="col-md-3">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Boger</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Maechtel</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Neuschwander</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Eck</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-1">
+							<p>MINUS</p>
+						</div>
+						<div class="col-md-8">
+							<form role="form">
+								<div class="form-group">
+									<input class="form-control player-form" id="player2"
+										placeholder="Enter Player 6">
+								</div>
+							</form>
+						</div>
+-->
+						<!-- Dropdown col -->
+						<div class="col-md-3">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+									Dropdown <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Boger</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Maechtel</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Neuschwander</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">Eck</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<!-- col for minus -->
+						<div class="col-md-1"></div>
+						<!-- col for forms -->
+						<div class="col-md-8">
+							<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+						</div>
+						<!-- Dropdown col -->
+						<div class="col-md-3"></div>
+					</div>
+					<div class="row">
+						<!-- col for minus -->
+						<div class="col-md-1"></div>
+						<!-- col for forms -->
+						<div class="col-md-8">
+							<button type="button" class="btn btn-default btn-monopoly-start">Start
+								Game</button>
+						</div>
+						<!-- Dropdown col -->
+						<div class="col-md-3"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- empty col -->
+			<div class="col-md-3"></div>
+		</div>
+	</div>
 </body>
 </html>
