@@ -3,7 +3,8 @@ var startPage = angular.module('monopolyStartPage', []);
 startPage.controller('Controller', [ '$scope', function($scope) {
 
 	$scope.showAddButton = true;
-	$scope.showMinusButton = true;
+	$scope.showMinusButton = false;
+
 	$scope.players = [ {
 		name : "",
 		figure : ""
@@ -26,28 +27,26 @@ startPage.controller('Controller', [ '$scope', function($scope) {
 	};
 	
 	$scope.rmPlayer = function(index) {
+		if ($scope.players.length > 2) {
+			$scope.players.splice(index, 1);	
+		}
 
-		$scope.players.splice(index, 1);
-
-		if ($scope.players.length > 3) {
-			$scope.showMinusButton = true;
-
-		} 
+		$scope.showAddButton = true;
+		
 	};
 
-	$scope.master = {};
-
-	$scope.update = function(user) {
-		$scope.master = angular.copy(user);
-	};
 
 	$scope.startGame = function(player) {
-		$scope.master = angular.copy(player);
+		// TODO
 	};
 
-	$scope.addRow = function() {
-		$scope.master = angular.copy("ho ho");
+	$scope.dispMinusButton = function() {
+
+
+		$scope.showMinusButton = true;
+
 	}
+
 
 	// variables
 } ]).directive('rowForms', function() {
