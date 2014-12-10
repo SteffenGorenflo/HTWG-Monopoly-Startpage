@@ -34,5 +34,49 @@
  }
 
  .monopoly-alert {
- 	margin-top: 10%;
+ 	margin-top: 10%
+ }
+
+ .mon-fade.ng-hide-add,
+ .mon-fade.ng-hide-remove {
+ 	-webkit-transition:0.3s linear all;
+ 	transition:0.3s linear all;
+
+ 	/* remember to add this */
+ 	display:block!important;
+ 	opacity:1;
+ }
+ .mon-fade.ng-hide {
+ 	opacity:0;
+ }
+
+ .mon-fade-repeat.ng-enter, 
+ .mon-fade-repeat.ng-leave, 
+ .mon-fade-repeat.ng-move {
+ 	-webkit-transition: 0.2s linear all;
+ 	transition: 0.2s linear all;
+ 	position:relative;
+ }
+
+ .mon-fade-repeat.ng-enter {
+ 	opacity:0;
+ }
+ .mon-fade-repeat.ng-enter.ng-enter-active {
+ 	left:0;
+ 	opacity:1;
+ }
+
+ .mon-fade-repeat.ng-leave {
+ 	left:0;
+ 	opacity:1;
+ }
+ .mon-fade-repeat.ng-leave.ng-leave-active {
+ 	opacity:0;
+ }
+
+ .mon-fade-repeat.ng-move {
+ 	opacity:0.5;
+ }
+ .mon-fade-repeat.ng-move.ng-move-active {
+ 	opacity:1;
  }

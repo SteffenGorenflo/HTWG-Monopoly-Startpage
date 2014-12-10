@@ -20,8 +20,11 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
   <!-- ANGULARRRRR -->
-  <script src="bower_components/angular/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-animate.js"></script>
+
 
 
 
@@ -54,11 +57,11 @@
       </div>
 
       <!-- repeat forms -->
-      <div class="row" ng-repeat="player in players" ng-mouseenter="showMinusButton = true" ng-mouseleave="showMinusButton = false">
+      <div class="row mon-fade-repeat" ng-repeat="player in players" ng-mouseenter="showMinusButton = true" ng-mouseleave="showMinusButton = false">
 
         <!-- col for the minus button -->
         <div class="col-md-1 ">
-          <span class="glyphicon glyphicon-remove monopoly_remove" aria-hidden="true"
+          <span class="glyphicon glyphicon-remove monopoly_remove mon-fade" aria-hidden="true"
           ng-click="rmPlayer($index)" ng-show="showMinusButton"></span>
         </div>
 
@@ -120,7 +123,7 @@
     <div class="row">
      <div class="col-md-1"></div>
      <div class="col-md-8">
-      <div class="alert alert-warning monopoly-alert" role="alert" ng-show="showAlert">{{alertMessage}}</div>
+      <div ng-show="showAlert" class="alert alert-warning monopoly-alert mon-fade" role="alert">{{alertMessage}}</div>
     </div>
     <div class="col-md-3"></div>
   </div>

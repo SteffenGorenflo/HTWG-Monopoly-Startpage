@@ -1,6 +1,6 @@
-var startPage = angular.module('monopolyStartPage', []);
+var startPage = angular.module('monopolyStartPage', ['ngAnimate']);
 
-startPage.controller('Controller', [ '$scope', function($scope, $timeout) {
+startPage.controller('Controller',  function($scope, $timeout) {
 
 	$scope.showAddButton = true;
 	$scope.showMinusButton = false;
@@ -34,7 +34,7 @@ startPage.controller('Controller', [ '$scope', function($scope, $timeout) {
 			$scope.alertMessage = "Mindestens 2 Spieler";
 			$scope.showAlert = true;
 
-			$timeout(function () { $scope.showAlert = false; }, 3000);
+			$timeout(function () { $scope.showAlert = false; }, 1500);
 
 		} else {
 			$scope.players.splice(index, 1);
@@ -54,9 +54,5 @@ startPage.controller('Controller', [ '$scope', function($scope, $timeout) {
 
 
 	// variables
-} ]).directive('rowForms', function() {
-	return {
-		templateURL : ''// template url like "xxx.htl"
-	};
 
 });
