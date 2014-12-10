@@ -7,6 +7,7 @@ startPage.controller('Controller',  function($scope, $timeout) {
 	$scope.showAlert = false;
 	$scope.alertMessage;
 
+
 	$scope.players = [ {
 		name : "",
 		figure : ""
@@ -14,6 +15,8 @@ startPage.controller('Controller',  function($scope, $timeout) {
 		name : "",
 		figure : ""
 	} ];
+
+	$scope.icons = ['1','2','3','4','5','6'];
 
 	$scope.addPlayer = function() {
 
@@ -43,6 +46,14 @@ startPage.controller('Controller',  function($scope, $timeout) {
 		
 	};
 
+	$scope.updatePlayerIcon = function(index,select) {
+		$scope.players[index].figure = select;
+
+		console.log($scope.players);
+
+		// delete from available icons		
+		$scope.icons.splice($scope.icons.indexOf(select),1);
+	}
 
 	$scope.startGame = function() {
 		$scope.alertMessage = "BLAAAA";
@@ -51,6 +62,8 @@ startPage.controller('Controller',  function($scope, $timeout) {
 		$timeout(function () { $scope.showAlert = false; }, 3000);
 		
 	};
+
+
 
 
 	// variables

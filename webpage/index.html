@@ -78,55 +78,42 @@
 
       <!-- Dropdown col -->
       <div class="col-md-3">
-        <div class="dropdown">
-         <button class="btn btn-default dropdown-toggle" type="button"
-         id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-         Dropdown <span class="caret"></span>
-       </button>
-       <ul class="dropdown-menu" role="menu"
-       aria-labelledby="dropdownMenu1">
-       <li role="presentation"><a role="menuitem" tabindex="-1"
-         href="#">Boger</a></li>
-         <li role="presentation"><a role="menuitem" tabindex="-1"
-           href="#">Maechtel</a></li>
-           <li role="presentation"><a role="menuitem" tabindex="-1"
-             href="#">Neuschwander</a></li>
-             <li role="presentation"><a role="menuitem" tabindex="-1"
-               href="#">Eck</a></li>
-             </ul>
-           </div>
-         </div>
-
-       </div>
-
-       <!--  second last row with plus button -->
-       <div class="row">
-         <div class="col-md-1"></div>
-         <!-- col for forms -->
-         <div class="col-md-8">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"
-          ng-click="addPlayer()" ng-show="showAddButton"></span>
+        <div ng-hide="player.figure">
+        <select class="form-control" ng-model="select" ng-options="icon for icon in icons" ng-change="updatePlayerIcon($index,select)" ng-disabled="player.figure">
+        </select>
         </div>
-        <div class="col-md-3"></div>
+        <div ng-show="player.figure">{{player.figure}}</div>
       </div>
 
-      <!--  last row with submit button -->
-      <div class="row">
-       <div class="col-md-1"></div>
-       <div class="col-md-8">
-        <button type="button" class="btn btn-default btn-monopoly-start"
-        ng-click="startGame()">Start Game</button>
-      </div>
-      <div class="col-md-3"></div>
     </div>
 
+    <!--  second last row with plus button -->
     <div class="row">
      <div class="col-md-1"></div>
+     <!-- col for forms -->
      <div class="col-md-8">
-      <div ng-show="showAlert" class="alert alert-warning monopoly-alert mon-fade" role="alert">{{alertMessage}}</div>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"
+      ng-click="addPlayer()" ng-show="showAddButton"></span>
     </div>
     <div class="col-md-3"></div>
   </div>
+
+  <!--  last row with submit button -->
+  <div class="row">
+   <div class="col-md-1"></div>
+   <div class="col-md-8">
+    <button type="button" class="btn btn-default btn-monopoly-start"
+    ng-click="startGame()">Start Game</button>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+<div class="row">
+ <div class="col-md-1"></div>
+ <div class="col-md-8">
+  <div ng-show="showAlert" class="alert alert-warning monopoly-alert mon-fade" role="alert">{{alertMessage}}</div>
+</div>
+</div>
 </div>
 </div>
 
