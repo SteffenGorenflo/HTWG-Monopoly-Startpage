@@ -40,7 +40,14 @@ startPage.controller('Controller',  function($scope, $timeout) {
 			$timeout(function () { $scope.showAlert = false; }, 1500);
 
 		} else {
+			// add to available icons
+			$scope.icons.push($scope.players[index].figure);
+			$scope.icons.sort();
+
+			// delete existing user
 			$scope.players.splice(index, 1);
+
+			// show the the plus button
 			$scope.showAddButton = true;
 		}
 		
