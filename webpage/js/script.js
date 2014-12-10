@@ -1,9 +1,11 @@
 var startPage = angular.module('monopolyStartPage', []);
 
-startPage.controller('Controller', [ '$scope', function($scope) {
+startPage.controller('Controller', [ '$scope', function($scope, $timeout) {
 
 	$scope.showAddButton = true;
 	$scope.showMinusButton = false;
+	$scope.showAlert = false;
+	$scope.alertMessage;
 
 	$scope.players = [ {
 		name : "",
@@ -27,25 +29,28 @@ startPage.controller('Controller', [ '$scope', function($scope) {
 	};
 	
 	$scope.rmPlayer = function(index) {
-		if ($scope.players.length > 2) {
-			$scope.players.splice(index, 1);	
-		}
+		if ($scope.players.length < 3) {
 
-		$scope.showAddButton = true;
+			$scope.alertMessage = "Mindestens 2 Spieler";
+			$scope.showAlert = true;
+
+			$timeout(function () { $scope.showAlert = false; }, 3000);
+
+		} else {
+			$scope.players.splice(index, 1);
+			$scope.showAddButton = true;
+		}
 		
 	};
 
 
-	$scope.startGame = function(player) {
-		// TODO
+	$scope.startGame = function() {
+		$scope.alertMessage = "BLAAAA";
+		$scope.showAlert = true;
+
+		$timeout(function () { $scope.showAlert = false; }, 3000);
+		
 	};
-
-	$scope.dispMinusButton = function() {
-
-
-		$scope.showMinusButton = true;
-
-	}
 
 
 	// variables
