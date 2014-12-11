@@ -52,7 +52,7 @@
           <p>Bitte Spielernamen eingeben</p>
         </div>
         <div class="col-md-3">
-          <p>&nbsp;</p>
+          <p>Figur</p>
         </div>
       </div>
 
@@ -82,7 +82,7 @@
         <select class="form-control" ng-model="select" ng-options="icon for icon in icons" ng-change="updatePlayerIcon($index,select)" ng-disabled="player.figure">
         </select>
         </div>
-        <div ng-show="player.figure">{{player.figure}}</div>
+        <img ng-src="images/{{player.figure}}.jpg" class="monopoly-icon" ng-show="player.figure"/>
       </div>
 
     </div>

@@ -16,7 +16,7 @@ startPage.controller('Controller',  function($scope, $timeout) {
 		figure : ""
 	} ];
 
-	$scope.icons = ['1','2','3','4','5','6'];
+	$scope.icons = ['Maechtel','Neuschwander','Schoppa','Garloff','5','6'];
 
 	$scope.addPlayer = function() {
 
@@ -63,12 +63,33 @@ startPage.controller('Controller',  function($scope, $timeout) {
 	}
 
 	$scope.startGame = function() {
-		$scope.alertMessage = "BLAAAA";
+
+		for (var index = 0; index < $scope.players.length; ++index) {
+
+			if ($scope.players[index].name === "") {
+				$scope.displayError("Bitte Namen für Spieler eintragen.")
+				return;
+			} else if ($scope.players[index].figure === "") {
+				$scope.displayError("Bitte Figur für Spieler auswaehlen.")
+				return;
+			}
+
+		}
+
+
+		$scope.alertMessage = "Starting a new game"
 		$scope.showAlert = true;
 
 		$timeout(function () { $scope.showAlert = false; }, 3000);
-		
+
 	};
+
+	$scope.displayError = function(error) {
+		$scope.alertMessage = error
+		$scope.showAlert = true;
+
+		$timeout(function () { $scope.showAlert = false; }, 3000);
+	}
 
 
 

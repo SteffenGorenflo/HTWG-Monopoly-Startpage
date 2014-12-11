@@ -37,12 +37,16 @@
  	margin-top: 10%
  }
 
+ .monopoly-icon {
+ 	width: 25px;
+ }
+
+
+/* fade animations */
  .mon-fade.ng-hide-add,
  .mon-fade.ng-hide-remove {
  	-webkit-transition:0.3s linear all;
  	transition:0.3s linear all;
-
- 	/* remember to add this */
  	display:block!important;
  	opacity:1;
  }
