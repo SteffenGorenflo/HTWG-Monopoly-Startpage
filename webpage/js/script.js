@@ -1,9 +1,13 @@
-var startPage = angular.module('monopolyStartPage', []);
+var startPage = angular.module('monopolyStartPage', ['ngAnimate']);
 
-startPage.controller('Controller', [ '$scope', function($scope) {
+startPage.controller('Controller',  function($scope, $timeout) {
 
 	$scope.showAddButton = true;
-	$scope.showMinusButton = true;
+	$scope.showMinusButton = false;
+	$scope.showAlert = false;
+	$scope.alertMessage;
+
+
 	$scope.players = [ {
 		name : "",
 		figure : ""
@@ -11,6 +15,8 @@ startPage.controller('Controller', [ '$scope', function($scope) {
 		name : "",
 		figure : ""
 	} ];
+
+	$scope.icons = ['Maechtel','Neuschwander','Schoppa','Garloff','5','6'];
 
 	$scope.addPlayer = function() {
 
@@ -26,33 +32,63 @@ startPage.controller('Controller', [ '$scope', function($scope) {
 	};
 	
 	$scope.rmPlayer = function(index) {
+		if ($scope.players.length < 3) {
 
-		$scope.players.splice(index, 1);
+			$scope.alertMessage = "Mindestens 2 Spieler";
+			$scope.showAlert = true;
 
-		if ($scope.players.length > 3) {
-			$scope.showMinusButton = true;
+			$timeout(function () { $scope.showAlert = false; }, 1500);
 
-		} 
+		} else {
+			// add to available icons
+			$scope.icons.push($scope.players[index].figure);
+			$scope.icons.sort();
+
+			// delete existing user
+			$scope.players.splice(index, 1);
+
+			// show the the plus button
+			$scope.showAddButton = true;
+		}
+		
 	};
 
-	$scope.master = {};
+	$scope.updatePlayerIcon = function(index,select) {
+		$scope.players[index].figure = select;
 
-	$scope.update = function(user) {
-		$scope.master = angular.copy(user);
-	};
+		console.log($scope.players);
 
-	$scope.startGame = function(player) {
-		$scope.master = angular.copy(player);
-	};
-
-	$scope.addRow = function() {
-		$scope.master = angular.copy("ho ho");
+		// delete from available icons		
+		$scope.icons.splice($scope.icons.indexOf(select),1);
 	}
 
-	// variables
-} ]).directive('rowForms', function() {
-	return {
-		templateURL : ''// template url like "xxx.htl"
+	$scope.startGame = function() {
+
+		for (var index = 0; index < $scope.players.length; ++index) {
+
+			if ($scope.players[index].name === "") {
+				$scope.displayError("Bitte Namen für Spieler " + (index+1) + " eintragen.")
+				return;
+			} else if ($scope.players[index].figure === "") {
+				$scope.displayError("Bitte Figur für " +$scope.players[index].name +" auswaehlen.")
+				return;
+			}
+
+		}
+
+
+		$scope.alertMessage = "Starting a new game"
+		$scope.showAlert = true;
+
+		$timeout(function () { $scope.showAlert = false; }, 3000);
+
 	};
+
+	$scope.displayError = function(error) {
+		$scope.alertMessage = error
+		$scope.showAlert = true;
+
+		$timeout(function () { $scope.showAlert = false; }, 3000);
+	}
 
 });
