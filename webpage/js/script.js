@@ -67,10 +67,10 @@ startPage.controller('Controller',  function($scope, $timeout) {
 		for (var index = 0; index < $scope.players.length; ++index) {
 
 			if ($scope.players[index].name === "") {
-				$scope.displayError("Bitte Namen für Spieler eintragen.")
+				$scope.displayError("Bitte Namen für Spieler " + (index+1) + " eintragen.")
 				return;
 			} else if ($scope.players[index].figure === "") {
-				$scope.displayError("Bitte Figur für Spieler auswaehlen.")
+				$scope.displayError("Bitte Figur für " +$scope.players[index].name +" auswaehlen.")
 				return;
 			}
 
